@@ -104,6 +104,7 @@ const AppRouter = () => (
     <PrivateRoute path={Routes.LOGOUT} component={AsyncLogout} />
     <PrivateRoute path={Routes.PROFILE} component={AsyncProfile} />
     <PrivateRoute path={Routes.CHANGEPASSWORD} component={AsyncChangePassword } />
+    <PrivateRoute path={Routes.REPORT_ID} component={AsyncReport} />
     
     <PrivateRoute path={Routes.adminRoutes[0].url} component={AsyncFaculties} />
     <PrivateRoute path={Routes.adminRoutes[1].url} component={AsyncCarrier} />
