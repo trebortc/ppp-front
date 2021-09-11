@@ -100,6 +100,18 @@ const InternshipsList = () => {
       )
     }
   }
+  const status = (internship) => {
+    switch(internship.status) {
+      case "registered":
+        return <>
+          <Link to={Routes.REPORT_ID.replace(':id', internship.key)}>
+            Reporte
+          </Link></>;
+      default:
+        return <></>
+    }
+  }
+
   const columns = [
     {
       title: 'Fecha de creación',
@@ -203,9 +215,13 @@ const InternshipsList = () => {
       key: 'actions',
       render: (value, internship) => {
         return (
+          <>
           <Link to={Routes.INTERNSHIP_ID.replace(':id', internship.key)}>
             Ver detalles
           </Link>
+          {' '}
+          {status(internship)}
+          </>
         )
       },
     },

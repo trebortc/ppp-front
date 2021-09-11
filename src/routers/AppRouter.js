@@ -75,7 +75,10 @@ const AsyncChangePassword = loadable(
   () => import('../pages/ChangePasswordPage'),
   loadableOptions
 )
-
+const AsyncReport = loadable(
+  () => import('../pages/ReportPage'),
+  loadableOptions
+)
 
 
 /**
