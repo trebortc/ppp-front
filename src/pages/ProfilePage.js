@@ -17,13 +17,7 @@ const ProfilePage = () => {
         <div className="BodyCard">
           <div>
             <Card
-              hoverable
-              cover={
-                <img
-                  alt="example"
-                  src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"
-                />
-              }
+              hoverable              
             >
               <Form {...layout} name="nest-messages">
                 <Form.Item className="TitleFormDefault">

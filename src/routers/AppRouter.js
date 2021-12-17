@@ -97,7 +97,7 @@ const AppRouter = () => (
     <PublicRoute exact path={Routes.INDEX} component={AsyncIndex} />
     <PublicRoute path={Routes.LOGIN} component={AsyncLogin} />
     <PublicRoute path={Routes.REGISTER} component={AsyncRegister} />
-    <PublicRoute path={Routes.ABOUT} component={AsyncAbout} />
+    {/* <PublicRoute path={Routes.ABOUT} component={AsyncAbout} /> */}
     <PublicRoute path={Routes.RECOVERPASSWORD} component={AsyncRecoverPassword} />
     <PrivateRoute path={Routes.HOME} component={AsyncHome} />
     <PrivateRoute path={Routes.INTERNSHIP_ID} component={AsyncInternship} />

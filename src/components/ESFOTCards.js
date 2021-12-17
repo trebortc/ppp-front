@@ -33,7 +33,6 @@ Buscar la constante actualización de conocimientos a través del autoaprendizaj
     </Card>
   </div>
 )
-
 ESFOTCards.propTypes = {
   title: PropTypes.string,
 }

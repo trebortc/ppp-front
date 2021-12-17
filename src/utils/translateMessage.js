@@ -3,7 +3,13 @@
  */
 
 export const translateMessage = (type, params = {}) => {
+  console.log("traducir");
+  console.log(type);
+  console.log(params);
   const messageList = {
+    password_already_sent:'Usuario con clave', 'user':'Usuario con clave enviada',
+    password_send:'Clave enviada a usuario', 'user password': 'Contraseña enviada a usuario',
+    error_found:'No existe usuario', 'not found user':'Usuario no existe',    
     invalid_credentials: 'Usuario o clave incorrectos',
     'The given data was invalid.': 'Datos no válidos',
     token_expired: 'Tu sesión ha expirado',

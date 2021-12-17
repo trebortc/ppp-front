@@ -118,10 +118,10 @@ const LoginPage = () => {
                 >
                   Ingresar
                 </Button>
-                <div>
+                {/* <div>
                   Si es la primera vez que usas el sistema,{' '}
                   <Link to={Routes.REGISTER}>ingresa aquí</Link>
-                </div>
+                </div> */}
               </Form.Item>
             </Form>
           </Col>

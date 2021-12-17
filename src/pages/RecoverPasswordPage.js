@@ -1,4 +1,4 @@
-import React, {  useContext, useState } from 'react'
+import React, {  useContext, useState, Redirect } from 'react'
 import withoutAuth from '../hocs/withoutAuth'
 import ModalContext from '../context/ModalContext'
 import { RecoverData } from '../utils/formActions'
@@ -16,7 +16,6 @@ const RecoverPasswordPage = () => {
     setIsSubmitting(true)
     await RecoverData('Enviando Datos','Tus credenciales fueron enviadas a tu correo','email', values)
     setIsSubmitting(false)
-
   }
   return (
     <>

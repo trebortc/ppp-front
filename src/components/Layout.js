@@ -4,7 +4,7 @@
 import React from 'react'
 import Navigation from './Navigation'
 import { Col, Layout, Row } from 'antd'
-import logoEsfot from '../images/logo-esfot.png'
+import logoEsfot from '../images/esfotBuhoLetras.svg'
 import { useAuth } from '../providers/Auth'
 import MenuUser from './MenuUser'
 
@@ -21,7 +21,7 @@ const Content = Layout.Content
  * @constructor
  */
 const MainLayout = (props) => {
-  console.log('props', props)
+  // console.log('props', props)
 
   const { isAuthenticated, isCheckingAuth, currentUser } = useAuth()
   console.log(currentUser)
@@ -31,12 +31,9 @@ const MainLayout = (props) => {
       <Layout>
         <Header className="header">
           <Row type="flex" justify="space-between" align="bottom">
-            <Col xs={24} md={6} className="logo-wrapper">
-              <a href={process.env.REACT_APP_DOMAIN}>
-                <img className="logo" src={logoEsfot} alt="ESFOT" height={50} />
-              </a>
+            <Col xs={24} md={6} className="logo-wrapper">            
+              <img className="logo" src={logoEsfot} alt="ESFOT"/>
             </Col>
-
             <Col md={14} align="right" className="main-menu">
               <Navigation mode="horizontal" />
             </Col>

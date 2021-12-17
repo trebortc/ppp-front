@@ -1,14 +1,17 @@
 import React from 'react'
+import { Card } from 'antd';
 import { Col, Row } from 'antd'
 import { Carousel } from 'antd'
 import ESFOT1 from '../images/ESFOT1.jpg'
 import ESFOT2 from '../images/ESFOT2.jpg'
 import ESFOT3 from '../images/ESFOT3.jpg'
 import ESFOT4 from '../images/ESFOT4.jpg'
-import ESFOTCards from '../components/ESFOTCards'
-const Anuncio1 = require('../images/Anuncio1.jpg')
-const Anuncio2 = require('../images/Anuncio2.jpg')
-const Anuncio3 = require('../images/Anuncio3.jpg')
+import Anuncio1 from '../images/desarrollo_software.jpg'
+import Anuncio2 from '../images/agua_saneamiento.jpg'
+import Anuncio3 from '../images/electromecanica.jpg'
+import Anuncio4 from '../images/redes_tele-2.jpg'
+
+const { Meta } = Card;
 
 const HomePage = () => {
   return (
@@ -24,88 +27,89 @@ const HomePage = () => {
           <div>
             <img className="AnuncioDefault" alt="Anuncio" src={Anuncio3} />
           </div>
+          <div>
+            <img className="AnuncioDefault" alt="Anuncio" src={Anuncio4} />
+          </div>
         </Carousel>
-        <Row>
-          <Col className="textDefault" span={24}>
-            <h1>ESCUELA POLITECNICA NACIONAL - ESFOT</h1>
-          </Col>
-          <Col className="textDefault" span={9} offset={3}>
-            <p className="TitleDefault">ESFOT</p>
-            <p>
-              Las funciones o desempeños de la profesión que se espera que los
-              graduados de la carrera de Tecnología Superior en Agua y
-              Saneamiento Ambiental alcancen dentro de los 3 a 5 años
-              posteriores a su graduación son: Apoyar en servicios de
-              consultoría para el desarrollo de proyectos de tecnologías en agua
-              y saneamiento ambiental, orientados a la gestión, planeación,
-              análisis, diseño, implementación, operación y mantenimiento de
-              sistemas. Participar en obras de abastecimiento de agua y
-              saneamiento ambiental, garantizando aspectos de seguridad, calidad
-              y conservación del ambiente
-            </p>
-          </Col>
-          <Col className="textDefault" span={9}>
-            <p className="TitleDefault">EPN</p>
-            <p>
-              Las funciones o desempeños de la profesión que se espera que los
-              graduados de la carrera de Tecnología Superior en Agua y
-              Saneamiento Ambiental alcancen dentro de los 3 a 5 años
-              posteriores a su graduación son: Apoyar en servicios de
-              consultoría para el desarrollo de proyectos de tecnologías en agua
-              y saneamiento ambiental, orientados a la gestión, planeación,
-              análisis, diseño, implementación, operación y mantenimiento de
-              sistemas. Participar en obras de abastecimiento de agua y
-              saneamiento ambiental, garantizando aspectos de seguridad, calidad
-              y conservación del ambiente
-            </p>
-          </Col>
-        </Row>
-        <Row>
-          <Col className="textDefault" span={18} offset={3}>
-            <p className="TitleDefault">NOSOTROS</p>
-            <p>
-              Las funciones o desempeños de la profesión que se espera que los
-              graduados de la carrera de Tecnología Superior en Agua y
-              Saneamiento Ambiental alcancen dentro de los 3 a 5 años
-              posteriores a su graduación son: Apoyar en servicios de
-              consultoría para el desarrollo de proyectos de tecnologías en agua
-              y saneamiento ambiental, orientados a la gestión, planeación,
-              análisis, diseño, implementación, operación y mantenimiento de
-              sistemas. Participar en obras de abastecimiento de agua y
-              saneamiento ambiental, garantizando aspectos de seguridad, calidad
-              y conservación del ambiente
-            </p>
-          </Col>
-        </Row>
-        <ESFOTCards
-          image={ESFOT1}
-          title="Tecnología Superior en Agua y Saneamiento Ambiental - TSASA"
-          description="DESCRIPCION"
-        />
-        <ESFOTCards
-          image={ESFOT2}
-          title="Tecnología Superior en Desarrollo de Software - TSDS"
-          description="DESCRIPCION"
-        />
-        <ESFOTCards
-          image={ESFOT3}
-          title="Tecnología Superior en Electromecánica - TSE"
-          description="DESCRIPCION"
-        />
-        <ESFOTCards
-          image={ESFOT4}
-          title="Tecnología Superior en Redes y Telecomunicaciones - TSRT"
-          description="DESCRIPCION"
-        />
+        <Card hoverable>
+          <Row>
+            <Col span={1}>
+              <img
+                className="AnuncioDefault"
+                data-test="EsfotC"
+                alt="example"
+                src={ESFOT2}
+              />
+            </Col>
+
+            <Col span={20} offset={1}>
+              <Meta
+                title="Tecnología Superior en Desarrollo de Software - TSDS"
+                description="Los profesionales en Tecnología Superior en Desarrollo de Software, de la Escuela Politécnica Nacional, podrán poner soluciones relacionados al desarrollo, mantenimiento y soporte de aplicaciones software, altamente competentes, con responsabilidad social y espíritu emprendedor, basados en un currículo que permita un proceso de formación teórico práctico con herramientas actualizadas; que aporten en el planteamiento de soluciones innovadoras en el área de desarrollo de software contribuyendo a la vez con la transformación de la matriz productiva del país."
+              />
+            </Col>
+          </Row>
+        </Card>
+        <Card hoverable>
+          <Row>
+            <Col span={1}>
+              <img
+                className="AnuncioDefault"
+                data-test="EsfotC"
+                alt="example"
+                src={ESFOT1}
+              />
+            </Col>
+            <Col span={20} offset={1}>
+              <Meta
+                title="Tecnología Superior en Agua y Saneamiento Ambiental - TSASA"
+                description="Los profesionales en Tecnología Superior en Agua y Saneamiento Ambiental contribuyen en el planteamiento de soluciones ambientales innovadoras para así generar un impacto positivo en la sociedad bajo los lineamientos del Plan Nacional del Buen Vivir y enmarcados en el desarrollo de los Sectores Estratégicos."
+              />
+            </Col>
+          </Row>
+        </Card>
+        <Card hoverable>
+          <Row>
+            <Col span={1}>
+              <img
+                className="AnuncioDefault"
+                data-test="EsfotC"
+                alt="example"
+                src={ESFOT3}
+              />
+            </Col>
+            <Col span={20} offset={1}>
+              <Meta
+                title="Tecnología Superior en Redes y Telecomunicaciones - TSRT"
+                description="Los profesionales en Tecnología Superior de Redes y TelecomunicacIones podrán implementar y brindar soporte tecnológico en el planteamiento de soluciones innovadoras en el área de las Redes y Telecomunicaciones para así aportar al cambio de la matriz productiva del país y al cumplimiento del Plan Nacional del Buen Vivir, comprometidos con la sociedad y el medio ambiente."
+              />
+            </Col>
+          </Row>
+        </Card>
+        <Card hoverable>
+          <Row>
+            <Col span={1}>
+              <img
+                className="AnuncioDefault"
+                data-test="EsfotC"
+                alt="example"
+                src={ESFOT4}
+              />
+            </Col>
+            <Col span={20} offset={1}>
+              <Meta
+                title="Tecnología Superior en Electromecánica - TSEM"
+                description="Los profesionales en Tecnología Superior en Electromecánica poseen destrezas para diseñar, construir, instalar, adaptar y brindar mantenimiento a sistemas electromecánicos para uso industrial o residencial, que contribuyan con el planteamiento de soluciones innovadoras a problemas existentes en los sectores industrial o residencial en las áreas de manufactura, instalaciones eléctricas, automatización y/o manejo eficiente de energía, para así aportar a la consolidación del cambio de las matrices productiva y energética enmarcadas en el Plan Nacional del Buen Vivir y las Agendas de Desarrollo Regional y Zonal."
+              />
+            </Col>
+          </Row>
+        </Card>
       </div>
-      <style jsx>{`
+      {/* <style jsx>{`
         .AnuncioDefault {
-          width: 100%;
-          height: 100%;
-          padding: 0;
-          margin: 0;
+
         }
-      `}</style>
+      `}</style> */}
     </>
   )
 }
